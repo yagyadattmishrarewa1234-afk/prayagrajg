@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahakumbh Prayagraj</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Parallax effect */
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center text-center text-white parallax" 
+           style="background-image: url('https://images.unsplash.com/photo-1584448093201-2df7e8d7f4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-r from-orange-600/80 to-yellow-500/80"></div>
+    <div class="relative z-10 px-6" data-aos="zoom-in" data-aos-duration="1500">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 animate-pulse">महाकुंभ मेला 2025</h2>
+      <p class="text-lg md:text-2xl mb-6">The world’s largest spiritual gathering at Prayagraj</p>
+      <a href="#about" class="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition">
+        Explore More
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative p-10 md:p-20 text-center text-white parallax" 
+           style="background-image: url('https://images.unsplash.com/photo-1602848599805-3f6a9f8d8e64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10" data-aos="fade-up" data-aos-duration="1200">
+      <h2 class="text-3xl font-semibold mb-6 text-yellow-400">About Mahakumbh</h2>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        महा‍कुंभ मेला विश्व का सबसे बड़ा धार्मिक और सांस्कृतिक आयोजन है। यह भारत में चार स्थानों पर आयोजित किया जाता है – प्रयागराज (इलाहाबाद), हरिद्वार, उज्जैन और नासिक। महाकुंभ का आयोजन प्रत्येक 12 वर्षों में एक बार होता है, जबकि 6 वर्षों में होने वाले आयोजन को अर्धकुंभ कहा जाता है।<br><br>
+महाकुंभ का महत्व<br>
+आध्यात्मिक महत्ता: ऐसा माना जाता है कि महाकुंभ स्नान से जन्म-जन्मांतर के पाप नष्ट हो जाते हैं और मोक्ष की प्राप्ति होती है।<br>
+खगोलीय आधार: इसका समय और स्थान ग्रह-नक्षत्रों की स्थिति के अनुसार तय किया जाता है।<br>
+धार्मिक संगम: यह वह अवसर है जब लाखों-करोड़ों श्रद्धालु, साधु-संत, अखाड़े और महात्मा एक साथ संगम पर स्नान और साधना करते हैं।<br><br>
+प्रमुख विशेषताएँ<br>
+संगम स्नान – प्रयागराज में गंगा, यमुना और अदृश्य सरस्वती के संगम पर स्नान का विशेष महत्व है।
+साधु-संतों का जमावड़ा – नागा साधु, अखाड़े और विभिन्न धार्मिक परंपराओं के संत यहाँ एकत्र होते हैं।
+सांस्कृतिक धरोहर – यह केवल धार्मिक आयोजन नहीं है बल्कि भारत की सांस्कृतिक, आध्यात्मिक और सामाजिक विविधता का प्रतीक है।<br><br>
+ऐतिहासिक पृष्ठभूमि<br>
+पौराणिक कथा के अनुसार, समुद्र मंथन के समय अमृत कलश के लिए देवताओं और असुरों के बीच संघर्ष हुआ था। अमृत की बूंदें चार स्थानों पर गिरीं – प्रयागराज, हरिद्वार, उज्जैन और नासिक। इन्हीं स्थानों पर महाकुंभ आयोजित किया जाता है।<br><br>
+👉 महाकुंभ न केवल धार्मिक आस्था का पर्व है, बल्कि यह भारत की एकता, सांस्कृतिक विरासत और आस्था की शक्ति का जीवंत प्रमाण है।
+      </p>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="highlights" class="bg-gray-100 p-10 md:p-20">
+    <h3 class="text-3xl font-semibold text-center mb-10 text-orange-700" data-aos="fade-down" data-aos-duration="1000">
+      Spiritual Highlights
+    </h3>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <!-- Card 1 -->
+      <div class="relative group rounded-xl overflow-hidden shadow-lg" data-aos="flip-left" data-aos-duration="1200">
+        <img src="river-ganges-7616245.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition">🕉️ Sangam Snan</div>
+      </div>
+      <!-- Card 2 -->
+      <div class="relative group rounded-xl overflow-hidden shadow-lg" data-aos="flip-up" data-aos-duration="1200">
+        <img src="aarti-687348.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition">🔥 Ganga Aarti</div>
+      </div>
+      <!-- Card 3 -->
+      <div class="relative group rounded-xl overflow-hidden shadow-lg" data-aos="flip-right" data-aos-duration="1200">
+        <img src="sadhu-9791446.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition">🧘 Saints & Sadhus</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<div class="mt-5 flex justify-center gap-4">
+
+<button onclick="history.back()" 
+  class="bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
+  ⬅ Go Back
+</button>
+</div><br>
+
+</body>
+</html>

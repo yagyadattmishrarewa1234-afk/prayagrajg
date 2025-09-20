@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prayagraj Natural beauty</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* small custom styles for parallax & gallery */
+    .parallax {
+      transform: translateY(0);
+      transition: transform 0.12s linear;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gallery */
+    .gallery-track {
+      display: flex;
+      gap: 14px;
+      will-change: transform;
+      transition: transform 300ms ease;
+      touch-action: pan-y;
+    }
+    .gallery-item {
+      flex: 0 0 85%;
+      max-width: 85%;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    }
+
+    @media(min-width: 768px){
+      .gallery-item { flex: 0 0 45%; max-width: 45%; }
+    }
+
+    /* subtle focus ring */
+    a:focus, button:focus { outline: 3px solid rgba(99,102,241,0.2); outline-offset: 3px; }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+
+  <!-- NAV -->
+  <header class="fixed w-full z-40">
+    <div class="backdrop-blur bg-white/40">
+      <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 shadow-lg flex items-center justify-center text-white font-bold">P</div>
+          <span class="font-semibold text-lg">Prayagraj — Explore The Real World</span>
+        </a>
+
+        <nav class="hidden md:flex gap-6 items-center text-sm">
+          <a class="hover:text-sky-800" href="about.html">ABOUT</a>
+          <a class="hover:text-sky-600" href="gallary.html">GALLERY</a>
+          <a class="hover:text-sky-600" href="#nature">NATURE</a>
+          <a class="hover:text-sky-600" href="#visit">VISIT</a>
+          <a class="hover:text-sky-800" href="mahakumbh.html ">MAHAKUMBH</a>
+
+        </nav>
+
+        <div class="md:hidden">
+          <button id="navToggle" aria-label="Open menu" class="p-2 rounded bg-white/60 shadow">☰</button>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div id="mobileNav" class="hidden md:hidden">
+        <div class="px-5 pb-4 flex flex-col gap-3">
+          <a href="#About" class="py-2">ABOUT</a>
+          <a href="#gallery" class="py-2">Gallery</a>
+          <a href="#nature" class="py-2">Nature</a>
+          <a href="#visit" class="py-2">Visit</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- HERO with gradient + parallax background -->
+    <section class="relative h-screen min-h-[520px] flex items-center">
+      <!-- background layers -->
+      <div id="heroBg" class="absolute inset-0 parallax"
+           style="background-image: linear-gradient(120deg, rgba(20,60,250,15.0), rgba(20,220,50,25.18)), url('western-ghats-342762auto=format&fit=crop&w=1800&q=70'); background-size: cover; background-position: center;">
+      </div>
+
+      <!-- overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-black/12 to-transparent"></div>
+
+      <div class="relative max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
+         प्रयागराज - भारत का खूबसूरत शहर !
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-100 max-w-3xl mx-auto">
+          जहां नदियां मिलती हैं और प्रकृति सांस लेती है - शहर भर में शांत घाटों, नदी के किनारे के आकाश और समृद्ध हरियाली की खोज करें।
+        </p>
+
+        <div class="mt-5 flex justify-center gap-4">
+          <a href="gallary.html" class="inline-flex items-center gap-2 px-10 py-3 rounded-lg bg-gradient-to-r from-sky-400 via-pink-400 to-yellow-400
+             text-white shadow-lg hover:scale-[1.02] transform transition">Explore Gallery</a>
+
+          <a href="about.html" class="inline-flex items-center gap-2 px-10 py-3 rounded-lg bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500
+             text-white shadow-lg hover:scale-[1.02] transform transition">About Prayagraj</a>
+
+	  <a href="mahakumbh.html" class="inline-flex items-center gap-2 px-10 py-3 rounded-lg bg-gradient-to-r from-sky-400 via-pink-400 to-yellow-400
+             text-white shadow-lg hover:scale-[1.02] transform transition">MahaKumbh</a>
+
+</div>
+
+                 <div class="mt-12 flex justify-center gap-4 text-sm text-white/80">
+          <div class="px-3 py-1 bg-white/10 rounded-full">Triveni Sangam</div>
+          <div class="px-3 py-1 bg-white/10 rounded-full">Ghats & Sunsets</div>
+          <div class="px-3 py-1 bg-white/10 rounded-full">Birdlife & Rivers</div>
+        </div>
+      </div>
+
+      <!-- soft bottom wave -->
+      <!svg class="absolute bottom-0 left-0 right-0" viewBox="0 0 1500 120" preserveAspectRatio="none" style="height:80px"><path d="M0,0 C300,100 900,0 1200,80 L1200,120 L0,120 Z" fill="white"/></svg>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-14">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="fade-in">
+          <h2 class="text-3xl font-bold mb-4">About Prayagraj</h2>
+          <p class="text-lg leading-relaxed text-slate-700">
+		प्रयागराज भारत के उत्तर प्रदेश राज्य का एक प्रमुख नगर है। यह प्रयागराज ज़िले का मुख्यालय है और हिन्दूओं का एक मुख्य तीर्थस्थल है।हिन्दू धर्मग्रन्थों में वर्णित प्रयाग स्थल पवित्रतम नदी गंगा और यमुना के संगम पर स्थित है। यहीं सरस्वती नदी गुप्त रूप से संगम में मिलती है, अतः यह त्रिवेणी संगम कहलाता है, जहां प्रत्येक बारह वर्ष में कुंभ मेला लगता है।
+            
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-600">
+            <li>• Triveni Sangam — the confluence with deep cultural significance</li>
+            <li>• Peaceful ghats for sunrise & evening rituals</li>
+            <li>• Rivers, islands, and hidden green pockets to explore</li>
+          </ul>
+        </div>
+
+        <div class="fade-in">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="india-4071841.jpg"alt="prayagraj Kila" object-"cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY with touch motion -->
+    <section id="gallery" class="bg-gradient-to-b from-white to-slate-50 py-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-semibold mb-6">Gallery — Swipe to explore</h3>
+
+        <div class="relative">
+          <button id="prevBtn" aria-label="Prev" class="hidden md:inline-flex absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/90 rounded-full shadow">‹</button>
+          <button id="nextBtn" aria-label="Next" class="hidden md:inline-flex absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/90 rounded-full shadow">›</button>
+
+          <div id="galleryViewport" class="overflow-hidden">
+            <div id="galleryTrack" class="gallery-track py-6">
+              <!-- gallery items -->
+              <div class="gallery-item">
+                <img src="boat-4480998.jpg"alt="river ghats">
+              </div>
+              <div class="gallery-item">
+                <img src="street-4624295_1280.jpg"auto=format&fit=crop&w=1400&q=60" alt="sunset" object-cover">
+              </div>
+              <div class="gallery-item">
+                <img src="temple-7499927.jpg"auto=format&fit=crop&w=1400&q=60" alt="boats" class="w-full h-full object-cover">
+              </div>
+              <div class="gallery-item">
+                <img src="india-4071841.jpg"auto=format&fit=crop&w=1400&q=60" alt="birds on river" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-slate-600">Tip: On mobile, swipe left/right. On desktop, use the arrows or drag horizontally.</p>
+      </div>
+    </section>
+
+    <!-- NATURAL HIGHLIGHTS -->
+    <section id="nature" class="max-w-6xl mx-auto px-6 py-14">
+      <h3 class="text-2xl font-semibold mb-8">Nature & Highlights</h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="fade-in p-6 rounded-2xl bg-gradient-to-b from-emerald-50 to-white shadow">
+          <h4 class="font-bold mb-2">त्रिवेणी संगम</h4>
+          <p class="text-sm text-slate-600">भारत के प्रयागराज में त्रिवेणी संगम हैतीन पवित्र नदियों का पवित्र संगम: गंगा, यमुना और पौराणिक सरस्वती हिंदू धर्म के सबसे पवित्र स्थलों में से एक माने जाने वाले इस स्थान में डुबकी लगाने से पापों का नाश और मोक्ष की प्राप्ति होती है।</p>
+        </article>
+
+        <article class="fade-in p-6 rounded-2xl bg-gradient-to-b from-sky-50 to-white shadow">
+          <h4 class="font-bold mb-2">Ghats & Sunsets</h4>
+          <p class="text-sm text-slate-600">शांत घाटों पर शांतिपूर्ण सैर और नदी पर रंगीन सूर्यास्त के दृश्य देखने के लिए अग्रिम पंक्ति में बैठने की सुविधा उपलब्ध है।</p>
+        </article>
+
+        <article class="fade-in p-6 rounded-2xl bg-gradient-to-b from-yellow-50 to-white shadow">
+          <h4 class="font-bold mb-2">Birdlife</h4>
+          <p class="text-sm text-slate-600">मौसमी पक्षी आगंतुक नदी के किनारों पर इकट्ठा होते हैं - जो फोटोग्राफरों और प्रकृति प्रेमियों के लिए आदर्श है।</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISIT / CTA -->
+    <section id="visit" class="py-14 bg-gradient-to-r from-sky-50 via-white to-emerald-50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-4">Plan Your Visit</h3>
+        <p class="text-slate-700 mb-6">Best times: early mornings for misty river views, or evenings for warm golden light. Respect local customs at the ghats.<br><br>सबसे अच्छा समय: सुबह-सुबह नदी के धुंध भरे नज़ारों के लिए, या शाम को गर्म सुनहरी रोशनी के लिए। घाटों पर स्थानीय रीति-रिवाजों का सम्मान करें।</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-lg bg-white shadow">
+            <h4 class="font-semibold mb-2">How to reach</h4>
+            <p class="text-sm text-slate-600">प्रयागराज रेल और सड़क मार्ग से अच्छी तरह जुड़ा हुआ है। कई घाटों पर स्थानीय नाव की सवारी उपलब्ध है।</p>
+          </div>
+          <div class="p-6 rounded-lg bg-white shadow">
+            <h4 class="font-semibold mb-2">Local tips</h4>
+            <p class="text-sm text-slate-600">घाटों पर पानी साथ रखें, आरामदायक जूते पहनें, तथा अनुष्ठान क्षेत्रों में कदम रखने से पहले स्थानीय लोगों से पूछ लें।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-800 text-slate-200 py-8">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <div class="font-bold">Prayagraj — Natural Beauty</div>
+          <div class="text-xs text-slate-400 mt-1">A visual celebration — crafted with gradients & motion.</div>
+        </div>
+
+        <div class="text-xs text-slate-400">© Suraj Mishra </span> — All rights reserved</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- JS: parallax, animations, gallery touch -->
+  <script>
+    // Simple nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Hero parallax (small subtle movement)
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if(heroBg) {
+        // move at 20% of scroll
+        heroBg.style.transform = `translateY(${y * 0.18}px)`;
+      }
+      // also shift hero slightly for depth
+    }, { passive: true });
+
+    // Intersection observer for fade-in elements
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) e.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(node => observer.observe(node));
+
+    // Touch-enabled gallery (drag & swipe)
+    const track = document.getElementById('galleryTrack');
+    const viewport = document.getElementById('galleryViewport');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let isDown = false, startX = 0, scrollStart = 0;
+    let currentOffset = 0;
+
+    // Calculate max translate on init and on resize
+    function getMaxOffset(){
+      if(!track || !viewport) return 0;
+      const trackW = track.scrollWidth;
+      const viewW = viewport.clientWidth;
+      return Math.max(0, trackW - viewW + 20); // small padding
+    }
+
+    function setOffset(x) {
+      const max = getMaxOffset();
+      currentOffset = Math.min(Math.max(0, x), max);
+      track.style.transform = `translateX(${-currentOffset}px)`;
+    }
+
+    // mouse / touch events
+    track.addEventListener('pointerdown', (e) => {
+      isDown = true;
+      track.setPointerCapture(e.pointerId);
+      startX = e.clientX;
+      scrollStart = currentOffset;
+      track.style.transition = 'none';
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if(!isDown) return;
+      const dx = e.clientX - startX;
+      setOffset(scrollStart - dx);
+    });
+
+    window.addEventListener('pointerup', (e) => {
+      if(!isDown) return;
+      isDown = false;
+      track.releasePointerCapture(e.pointerId);
+      track.style.transition = '';
+    });
+
+    // arrow buttons - move by viewport width approx
+    prevBtn?.addEventListener('click', () => {
+      setOffset(currentOffset - (viewport.clientWidth * 0.8));
+    });
+    nextBtn?.addEventListener('click', () => {
+      setOffset(currentOffset + (viewport.clientWidth * 0.8));
+    });
+
+    // allow keyboard left/right
+    window.addEventListener('keydown', (e) => {
+      if(e.key === 'ArrowLeft') prevBtn?.click();
+      if(e.key === 'ArrowRight') nextBtn?.click();
+    });
+
+    // responsive recalc
+    window.addEventListener('resize', () => {
+      setOffset(currentOffset); // clamp within new max
+    });
+
+    // set year
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
